@@ -17,8 +17,8 @@ export const ACCESS_TOKEN_SECRET = getEnvVariable("ACCESS_TOKEN_SECRET");
 export const REFRESH_TOKEN_SECRET = getEnvVariable("REFRESH_TOKEN_SECRET");
 
 // Token Expiry Constants
-export const ACCESS_TOKEN_EXPIRY = getEnvVariable("ACCESS_TOKEN_EXPIRY");
-export const REFRESH_TOKEN_EXPIRY = getEnvVariable("REFRESH_TOKEN_EXPIRY");
+export const ACCESS_TOKEN_EXPIRY = parseInt(getEnvVariable("ACCESS_TOKEN_EXPIRY"), 10);
+export const REFRESH_TOKEN_EXPIRY = parseInt(getEnvVariable("REFRESH_TOKEN_EXPIRY"), 10);
 
 // Database Constants
 export const DATABASE_URI = getEnvVariable("DATABASE_URI");
