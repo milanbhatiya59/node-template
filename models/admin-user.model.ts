@@ -1,5 +1,5 @@
+import crypto from "crypto";
 import mongoose, { Schema } from "mongoose";
-import crypto from "crypto"
 
 const adminUserSchema = new Schema(
   {
@@ -27,7 +27,7 @@ const adminUserSchema = new Schema(
 );
 
 adminUserSchema.methods.generateAccessKey = async function () {
-  return await crypto.randomBytes(32).toString("hex");
+  return await crypto.randomBytes(20).toString("hex");
 };
 
 export const AdminUser = mongoose.model("AdminUser", adminUserSchema);
